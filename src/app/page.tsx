@@ -21,7 +21,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl sm:text-6xl font-bold mb-6"
           >
-            Hi, I'm Udit
+            Hi, I&apos;m Udit
           </motion.h1>
           <p className="text-lg sm:text-xl mb-6 max-w-xl px-4">
             Passionate about building scalable applications. Production Support
