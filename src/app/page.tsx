@@ -6,6 +6,7 @@ import Projects from "./Project/page";
 import Contact from "./Contact/page";
 import Skill from "./Skill/page";
 import Certificates from "./Certificates/page";
+import Achievements from "./Achievements/page";
 
 export default function Home() {
   return (
@@ -58,6 +59,11 @@ export default function Home() {
         {/* Certificate Section */}
         <section id="certificates" className="min-h-screen py-16 bg-gray-900 w-full">
           <Certificates />
+        </section>
+
+          {/* Achivements Section */}
+        <section id="achivements" className="min-h-screen py-16 bg-gray-900 w-full">
+          <Achievements />
         </section>
 
         {/* Contact Section */}

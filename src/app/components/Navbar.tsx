@@ -45,7 +45,7 @@ interface NavLinksProps {
 
 const NavLinks: React.FC<NavLinksProps> = ({ activeSection, onLinkClick }) => (
   <>
-    {['home', 'projects', 'skills', 'certificates', 'contact'].map((section) => (
+    {['home', 'projects', 'skills', 'certificates','achievements' ,'contact'].map((section) => (
       <Link
         key={section}
         href={`#${section}`}

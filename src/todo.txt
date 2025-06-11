@@ -1,7 +1,9 @@
+//Pending
 add dark mode
 link leet code and git hub dasboard
+fix the snake game for mobole and add it here
+
+//Done
 certificates, current emmployement, achievemenys
 host to github/vercel
-
-fix the snake game for mobole and add it here
 change skill to stack like pp
