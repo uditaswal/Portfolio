@@ -38,7 +38,7 @@ export default function Projects() {
               Docker
             </span>
              <span className="bg-teal-200 text-black text-xs font-medium px-3 py-1 rounded-full">
-              Azure
+              Twilio
             </span>
           </div>
 
