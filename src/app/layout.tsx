@@ -1,15 +1,20 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import './globals.css';
+import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import "./globals.css";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [activeSection, setActiveSection] = useState<string>('home');
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,10 +27,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }
       },
       {
-        threshold: 0.3, 
-        rootMargin: '0px 0px -20% 0px', 
+        threshold: 0.3,
+        rootMargin: "0px 0px -20% 0px",
         // This makes intersection fire a little *before* user fully reaches the bottom of section
-      }
+      },
     );
 
     sections.forEach((section) => observer.observe(section));
