@@ -48,7 +48,7 @@ export default function Projects() {
             </span>
           </div>
 
-          <div className="flex flex-row justify-evenly">
+          <div className="flex flex-row justify-center gap-3 flex-wrap">
             <a
               href="https://github.com/uditaswal/CarePlus"
               target="_blank"
