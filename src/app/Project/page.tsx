@@ -57,13 +57,21 @@ export default function Projects() {
             >
               GitHub 💻
             </a>
+                <a
+              href="https://careplus-eze4eehwdhdvh2dv.centralindia-01.azurewebsites.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
+            >
+              Checkout live site (Azure) 🚀
+            </a>
             <a
               href="https://care-plus-one.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
             >
-              Checkout live site 🚀
+              Checkout live site (Vercel) 🚀
             </a>
           </div>
         </div>
@@ -114,7 +122,7 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition"
             >
-              Checkout live site 🚀
+              Checkout live site (Render) 🚀
             </a>
           </div>
         </div>
