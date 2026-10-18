@@ -22,6 +22,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
       {/* Mobile Menu Button */}
       <button
+        aria-label="Toggle navigation menu"
+        aria-expanded={menuOpen}
         onClick={() => setMenuOpen(!menuOpen)}
         className="text-white text-3xl sm:hidden focus:outline-none"
       >
@@ -45,16 +47,23 @@ interface NavLinksProps {
 
 const NavLinks: React.FC<NavLinksProps> = ({ activeSection, onLinkClick }) => (
   <>
-    {['home', 'projects', 'skills', 'certificates','achievements' ,'contact'].map((section) => (
+    {[
+      { id: "home", label: "Home" },
+      { id: "projects", label: "Projects" },
+      { id: "skills", label: "Skills" },
+      { id: "certificates", label: "Certificates" },
+      { id: "achievements", label: "Honors & Awards" },
+      { id: "contact", label: "Contact" },
+    ].map(({ id, label }) => (
       <Link
-        key={section}
-        href={`#${section}`}
+        key={id}
+        href={`#${id}`}
         onClick={onLinkClick}
         className={`text-lg font-medium transition-colors ${
-          activeSection === section ? 'text-blue-400' : 'text-white hover:text-blue-300'
+          activeSection === id ? 'text-blue-400' : 'text-white hover:text-blue-300'
         }`}
       >
-        {section.charAt(0).toUpperCase() + section.slice(1)}
+        {label}
       </Link>
     ))}
   </>

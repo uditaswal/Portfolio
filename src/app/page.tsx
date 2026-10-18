@@ -8,7 +8,6 @@ import Skill from "./Skill/page";
 import Certificates from "./Certificates/page";
 import Achievements from "./Achievements/page";
 
-
 export default function Home() {
   return (
     <>
@@ -27,17 +26,17 @@ export default function Home() {
               Hi, I&apos;m Udit
             </motion.h1>
             <p className="text-lg sm:text-xl mb-6 max-w-xl px-4">
-              Passionate about building scalable applications. Production
-              Support Engineer @
+              Passionate about building scalable applications. Lead Software
+              Engineer @
               <a
                 href="https://www.hcltech.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold"
               >
-                HCL Tech
+                HCLTech
               </a>{" "}
-              learning to be Software Developer 🚀
+              {/* 🚀 */}
             </p>
             <a
               href="/Udit_Resume.pdf"
@@ -51,7 +50,7 @@ export default function Home() {
           {/* Projects Section */}
           <section
             id="projects"
-            className="min-h-screen py-16 bg-gray-900 w-full"
+            className="bg-gray-900 w-full"
           >
             <Projects />
           </section>
@@ -59,7 +58,7 @@ export default function Home() {
           {/* Skills Section */}
           <section
             id="skills"
-            className="min-h-screen py-16 bg-gray-900 w-full"
+            className="bg-gray-900 w-full"
           >
             <Skill />
           </section>
@@ -67,15 +66,15 @@ export default function Home() {
           {/* Certificate Section */}
           <section
             id="certificates"
-            className="min-h-screen py-16 bg-gray-900 w-full"
+            className="bg-gray-900 w-full"
           >
             <Certificates />
           </section>
 
-          {/* Achivements Section */}
+          {/* Honors and Awards Section */}
           <section
-            id="achivements"
-            className="min-h-screen py-16 bg-gray-900 w-full"
+            id="achievements"
+            className="bg-gray-900 w-full"
           >
             <Achievements />
           </section>
@@ -83,7 +82,7 @@ export default function Home() {
           {/* Contact Section */}
           <section
             id="contact"
-            className="min-h-screen py-16 bg-gray-900 w-full"
+            className="bg-gray-900 w-full"
           >
             <Contact />
           </section>

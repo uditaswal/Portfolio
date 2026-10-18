@@ -1,24 +1,40 @@
 export default function Projects() {
   return (
-    <section id="projects" className="bg-gray-900 py-20 px-6">
-      <h2 className="text-4xl font-bold text-center text-white mb-16">
+    <section id="projects" className="bg-gray-900 py-14 px-4 sm:px-6">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-10">
         🚀 Projects
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {/* Care Plus Project */}
         <div className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-green-400/50 transition flex flex-col items-center">
           <h3 className="text-2xl font-semibold text-white mb-4 text-center">
             CarePlus: Appointment Management System
           </h3>
-          <p className="text-gray-400 mb-6 text-center">
-            A full-stack healthcare appointment management system that enables
-            patients to register, book, and manage appointments with doctors. It
-            also provides administrative tools for managing scheduling,
-            confirming, and canceling appointments. Built with Next.js, it
-            features real-time SMS notifications, a responsive design, and
-            secure file uploads via Appwrite.
-          </p>
+          <ul className="mb-6 w-full list-disc space-y-2 pl-5 text-left text-gray-400">
+              <li>
+                Full-stack healthcare appointment management system built with
+                Next.js.
+              </li>
+              <li>
+                Allows patients to register, book appointments, and manage their
+                scheduled visits.
+              </li>
+              <li>
+                Provides administrative tools for confirming, rescheduling, and
+                canceling appointments.
+              </li>
+              <li>
+                Sends real-time SMS notifications and appointment updates.
+              </li>
+              <li>
+                Supports secure document and file uploads through Appwrite.
+              </li>
+              <li>
+                Includes a responsive interface optimized for desktop and mobile
+                devices.
+              </li>
+          </ul>
 
           {/* Stack icons*/}
           <div className="flex flex-wrap justify-center gap-2 mb-6">
@@ -57,7 +73,7 @@ export default function Projects() {
             >
               GitHub 💻
             </a>
-                <a
+            <a
               href="https://careplus-eze4eehwdhdvh2dv.centralindia-01.azurewebsites.net/"
               target="_blank"
               rel="noopener noreferrer"
@@ -82,16 +98,26 @@ export default function Projects() {
             🔗 URL Shortener
           </h3>
 
-          <p className="text-gray-400 mb-6 text-center">
-            URL shortener built with Node.js, Express, MongoDB, and EJS. Create
-            custom aliases with optional expiry, manage saved links, and track
-            click activity through an authenticated dashboard. Secure
-            cookie-based authentication with server-side session invalidation.
-            Alias validation, collision handling, expiry controls, rate
-            limiting, and safe redirects. Analytics dashboard, API
-            documentation, rotating + stdout logging, and GitHub Actions CI with
-            MongoDB integration tests
-          </p>
+          <ul className="mb-6 w-full list-disc space-y-2 pl-5 text-left text-gray-400">
+              <li>Built with Node.js, Express, MongoDB, and EJS.</li>
+              <li>
+                Supports custom aliases, optional expiry dates, saved-link
+                management, and click tracking.
+              </li>
+              <li>
+                Uses secure cookie-based authentication with server-side session
+                invalidation.
+              </li>
+              <li>
+                Includes alias validation, collision handling, rate limiting,
+                expiry controls, and safe redirects.
+              </li>
+              <li>
+                Provides an analytics dashboard, API documentation, and rotating
+                and stdout logging.
+              </li>
+              <li>Uses GitHub Actions CI with MongoDB integration tests.</li>
+          </ul>
 
           {/* Stack icons */}
           <div className="flex flex-wrap justify-center gap-2 mb-6">
@@ -110,7 +136,7 @@ export default function Projects() {
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <a
               href="https://github.com/uditaswal/url-shortner"
               target="_blank"
@@ -153,7 +179,7 @@ export default function Projects() {
             </span>
           </div>
           {/* Buttons */}
-          <div className="flex gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <a
               href="https://github.com/uditaswal/JS-SnakeGame"
               target="_blank"
