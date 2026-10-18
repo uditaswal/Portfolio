@@ -75,11 +75,14 @@ export default function Projects() {
           </h3>
 
           <p className="text-gray-400 mb-6 text-center">
-            A scalable full-stack URL shortener that converts long URLs into
-            short, shareable links with fast redirection and efficient storage.
-            It includes features like unique link generation, click tracking,
-            and basic analytics for monitoring usage. It ensures high
-            performance, reliability, and a responsive user experience.
+            URL shortener built with Node.js, Express, MongoDB, and EJS. Create
+            custom aliases with optional expiry, manage saved links, and track
+            click activity through an authenticated dashboard. Secure
+            cookie-based authentication with server-side session invalidation.
+            Alias validation, collision handling, expiry controls, rate
+            limiting, and safe redirects. Analytics dashboard, API
+            documentation, rotating + stdout logging, and GitHub Actions CI with
+            MongoDB integration tests
           </p>
 
           {/* Stack icons */}
