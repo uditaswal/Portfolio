@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { profile, sections } from "../data";
+import { showNotice } from "./Notice";
+import { RESUME_UNAVAILABLE } from "./ResumeButton";
 import { toggleTheme } from "./ThemeToggle";
 
 type Command = { label: string; hint: string; run: () => void };
@@ -41,7 +43,10 @@ export default function CommandPalette() {
       {
         label: "Download resume",
         hint: "File",
-        run: () => window.open(profile.resume, "_blank"),
+        run: () =>
+          profile.resume
+            ? window.open(profile.resume, "_blank")
+            : showNotice(RESUME_UNAVAILABLE),
       },
       {
         label: "Open GitHub",

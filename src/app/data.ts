@@ -29,7 +29,8 @@ export const profile = {
   github: "https://www.github.com/uditaswal",
   linkedin: "https://www.linkedin.com/in/uditaswal",
   /** File in /public, served as a download. */
-  resume: "/Udit_Resume.pdf",
+  resume: "",
+  // resume: "/Udit_Resume.pdf",
 };
 
 /* -------------------------------------------------------------------------- */

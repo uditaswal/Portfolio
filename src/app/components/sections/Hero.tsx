@@ -2,15 +2,16 @@ import Image from "next/image";
 import { profile } from "../../data";
 import Banner from "../Banner";
 import CommandPalette from "../CommandPalette";
+import ResumeButton from "../ResumeButton";
 import ThemeToggle from "../ThemeToggle";
 
 /**
- * Every contact button, in display order. `external` links open in a new tab;
- * `download` makes the browser save the file instead of opening it.
+ * Every contact button, in display order. `external` links open in a new tab.
+ * The `resume` entry is rendered by <ResumeButton>, which handles a missing file.
  */
 const links = [
   { label: "Email", href: `mailto:${profile.email}` },
-  { label: "Resume", href: profile.resume, download: true },
+  { label: "Resume", href: profile.resume, resume: true },
   { label: "GitHub", href: profile.github, external: true },
   { label: "LinkedIn", href: profile.linkedin, external: true },
 ];
@@ -79,18 +80,21 @@ export default function Hero() {
         </ul> */}
 
         <div className="mt-6 flex flex-wrap gap-2">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              download={link.download}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
-              className={buttonClass}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.resume ? (
+              <ResumeButton key={link.label} className={buttonClass} />
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                className={buttonClass}
+              >
+                {link.label}
+              </a>
+            ),
+          )}
         </div>
       </div>
     </section>

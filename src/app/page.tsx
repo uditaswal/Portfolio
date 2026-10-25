@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
 import { Divider } from "./components/Section";
+import NoticeHost from "./components/Notice";
 import TopNav from "./components/TopNav";
 import Contact from "./components/sections/Contact";
 import Education from "./components/sections/Education";
@@ -45,6 +46,7 @@ export default function Home() {
         </main>
         <Footer className="lg:hidden" />
       </div>
+      <NoticeHost />
     </div>
   );
 }
