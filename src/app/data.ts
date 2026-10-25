@@ -171,3 +171,20 @@ export const education = [
     note: "86%",
   },
 ];
+
+export const experience = [
+  {
+    role: "Lead Production Support Engineer",
+    company: "HCL Technologies",
+    detail: "Western Union project",
+    period: "2022 - Present",
+    points: [
+      "Led a team of 10 engineers in 24x7 rotational shifts, keeping systems available and incidents resolved.",
+      "Built internal tools with Node.js, Express.js, React.js and MongoDB, and automated workflows with Python.",
+      "Designed monitoring dashboards and alerting with Splunk, OpenSearch, Dynatrace and ServiceNow, integrated with BigPanda and xMatters, maintaining 100% SLA compliance.",
+      "Debugged production issues across Java, TIBCO BE/BW, Talend and AWS microservices affecting customer payment flows.",
+      "Troubleshot, tuned and reported on Oracle SQL, Snowflake and Couchbase Capella.",
+    ],
+    tags: ["Node.js", "React", "MongoDB", "Python", "Splunk", "Dynatrace", "OpenSearch", "ServiceNow", "Java", "AWS", "Oracle SQL", "Snowflake"],
+  },
+];

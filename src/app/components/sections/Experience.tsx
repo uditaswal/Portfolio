@@ -1,29 +1,37 @@
-import { profile } from "../../data";
-import Section from "../Section";
+import { experience } from "../../data";
+import Section, { Tag } from "../Section";
 
 export default function Experience() {
   return (
     <Section id="experience" title="Experience">
-      <div className="flex gap-4">
-        <div className="flex size-10 shrink-0 items-center justify-center border bg-card font-mono text-sm font-bold">
-          HCL
-        </div>
-        <div>
-          <h3 className="font-semibold">{profile.role}</h3>
-          <p className="text-sm text-muted-foreground">{profile.company}</p>
-          <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground marker:text-muted-foreground">
-            <li>Building and shipping scalable applications.</li>
-            <li>
-              Recognised with the Rising Star, Star Performer, ERS Star Champion
-              and Innovation Champion awards. See{" "}
-              <a href="#highlights" className="text-foreground underline-offset-4 hover:underline">
-                Highlights
-              </a>
-              .
-            </li>
-          </ul>
-        </div>
-      </div>
+      <ul className="space-y-8">
+        {experience.map((e) => (
+          <li key={e.role} className="flex gap-4">
+            <div className="flex size-10 shrink-0 items-center justify-center border bg-card font-mono text-sm font-bold">
+              HCL
+            </div>
+            <div className="min-w-0">
+              <h3 className="font-semibold">{e.role}</h3>
+              <p className="text-sm text-muted-foreground">
+                {e.company} · {e.detail}
+              </p>
+              <p className="font-mono text-xs text-muted-foreground">
+                {e.period}
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground">
+                {e.points.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-1.5">
+                {e.tags.map((t) => (
+                  <Tag key={t}>{t}</Tag>
+                ))}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }
