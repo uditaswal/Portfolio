@@ -28,6 +28,14 @@ export default function Experience() {
               </div>
             </header>
 
+            {job.skills && (
+              <div className="mt-4 flex flex-wrap gap-1.5">
+                {job.skills.map((skill) => (
+                  <Tag key={skill}>{skill}</Tag>
+                ))}
+              </div>
+            )}
+
             {/* The left border is the timeline; each role's dot sits on it. */}
             <ol className="mt-5 ml-6 space-y-5 border-l">
               {job.roles.map((role) => {
@@ -49,10 +57,13 @@ export default function Experience() {
                     />
 
                     {role.compact ? (
-                      // One line: title, then the details in grey.
-                      <p className="text-sm">
+                      // Short row: title, then dates and length in grey. Type and
+                      // work mode are left out here to keep it uncluttered.
+                      <p className="flex flex-wrap items-baseline gap-x-2 text-sm">
                         <span className="font-semibold">{role.title}</span>
-                        <span className="text-muted-foreground"> · {meta}</span>
+                        <span className="text-muted-foreground">
+                          {[role.period, role.duration].filter(Boolean).join(" · ")}
+                        </span>
                       </p>
                     ) : (
                       <>

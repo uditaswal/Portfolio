@@ -45,16 +45,25 @@ export default function Hero() {
         <h1 className="mt-4 text-2xl font-bold tracking-tight">
           {profile.name}
         </h1>
+        {/* Previous subtitle:
         <p className="mt-1 text-sm text-muted-foreground">
           {profile.role} @{" "}
+          <a href={profile.companyUrl} ...>{profile.company}</a>
+        </p> */}
+        <p className="mt-1 text-sm">
+          {profile.age}-year-old {profile.role} at{" "}
           <a
             href={profile.companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-foreground underline-offset-4 hover:underline"
+            className="font-semibold underline-offset-4 hover:underline"
           >
             {profile.company}
-          </a>
+          </a>{" "}
+          with {profile.yearsOfExperience} years of experience
+        </p>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Breaking prod straight out of 12th grade.
         </p>
 
         {/* <ul className="mt-5 list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-muted-foreground">

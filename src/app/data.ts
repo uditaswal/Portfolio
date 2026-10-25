@@ -21,6 +21,9 @@ export const profile = {
   name: "Udit Aswal",
   role: "Lead Engineer",
   company: "HCLTech",
+  /** Shown in the hero as "{age}-year-old ... with {yearsOfExperience} years of experience". Update by hand. */
+  age: 22,
+  yearsOfExperience: 4,
   companyUrl: "https://www.hcltech.com/",
   email: "udit.aswal37@gmail.com",
   github: "https://www.github.com/uditaswal",
@@ -75,6 +78,8 @@ export type Job = {
   location?: string;
   /** Total time at the company, shown next to the name. */
   tenure?: string;
+  /** Skills used across the whole stay. Shown once under the company name, so roles don't repeat them. */
+  skills?: string[];
   /** Newest role first. They render as a vertical timeline. */
   roles: Role[];
 };
@@ -85,6 +90,10 @@ export const experience: Job[] = [
     logo: "HCL",
     location: "Noida, Uttar Pradesh, India",
     tenure: "Aug 2021 - Present",
+    skills: [
+      "AWS", "Python", "TypeScript", "Node.js", "NextJS", "React", "MongoDB", "PostgreSQL",
+      "Java", "Tibco BE/BW", "Splunk", "Dynatrace", "Snowflake",
+    ],
     roles: [
       {
         title: "Lead Engineer",
@@ -98,7 +107,6 @@ export const experience: Job[] = [
         //   "Debug production issues across Java, TIBCO BE/BW, Talend and AWS microservices affecting customer payment flows.",
         //   "Troubleshoot, tune and report on Oracle SQL, Snowflake and Couchbase Capella.",
         // ],
-        skills: ["AWS","Python","TypeScript","Node.js", "NextJS", "React", "MongoDB","Postgress"],
       },
       {
         title: "Software Engineer",
@@ -106,7 +114,6 @@ export const experience: Job[] = [
         period: "Aug 2022 - Oct 2025",
         duration: "3 yrs 3 mos",
         mode: "Remote",
-        skills: [ "Java","Tibco BE/BW","Splunk", "Dynatrace", "Snowflake"],
       },
       {
         title: "Intern",
