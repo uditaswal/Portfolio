@@ -1,52 +1,33 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Udit Aswal",
+  description:
+    "Udit Aswal, Lead Software Engineer at HCLTech. Projects, skills, certificates and honors.",
+};
+
+const themeScript = `try{if(localStorage.getItem("theme")!=="light")document.documentElement.classList.add("dark")}catch(e){document.documentElement.classList.add("dark")}`;
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [activeSection, setActiveSection] = useState<string>("home");
-
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top); // Sort based on position
-
-        if (visibleSections.length > 0) {
-          setActiveSection(visibleSections[0].target.id);
-        }
-      },
-      {
-        threshold: 0.3,
-        rootMargin: "0px 0px -20% 0px",
-        // This makes intersection fire a little *before* user fully reaches the bottom of section
-      },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
-  }, []);
-
   return (
-    <html lang="en">
-      <body>
-        <Navbar activeSection={activeSection} />
-        <main>{children}</main>
-        <Footer />
-      </body>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

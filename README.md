@@ -15,8 +15,13 @@ A modern single-page portfolio website built with Next.js. It uses a clean dark 
 - Smooth animated transitions
 - Reusable React components
 - Downloadable resume call to action
-- Contact form and social links
+- Dark and light themes, plus a command palette (Ctrl/Cmd + K)
+- Email and social links
 - Optimized local images and assets
+
+## Design inspiration
+
+The layout and visual style are inspired by [Ashutoshx7's Portfolio-v2](https://github.com/Ashutoshx7/Portfolio-v2-). All content, code and assets in this repository are my own.
 
 ## Built with
 
