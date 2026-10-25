@@ -74,6 +74,26 @@ body {
 .scroll-area {
   scroll-behavior: smooth;
   scroll-padding-top: 3.5rem;
+  /* Thin, low-contrast scrollbar that only brightens on hover. */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
 }
 
 @keyframes marquee {

@@ -58,6 +58,8 @@ export type Role = {
   period: string;
   /** Optional length of the role, e.g. "3 yrs 3 mos". Leave out for a current role so it never goes stale. */
   duration?: string;
+  /** Render as a single line (no bullets or skill chips). Good for older, minor roles. */
+  compact?: boolean;
   /** e.g. "On-site", "Remote". */
   mode?: string;
   /** Short achievement bullets. Optional. */
@@ -108,6 +110,7 @@ export const experience: Job[] = [
       },
       {
         title: "Intern",
+        compact: true,
         type: "Internship",
         period: "Jan 2022 - Aug 2022",
         duration: "8 mos",
@@ -116,6 +119,7 @@ export const experience: Job[] = [
       },
       {
         title: "Scholar",
+        compact: true,
         type: "Apprenticeship",
         period: "Aug 2021 - Jan 2022",
         duration: "6 mos",
