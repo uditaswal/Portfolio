@@ -64,7 +64,7 @@ export default function Hero() {
           with {profile.yearsOfExperience} years of experience
         </p>
         <p className="mt-1 text-sm text-muted-foreground">
-          Breaking prod straight out of 12th grade.
+          On-call since 12th grade.
         </p>
 
         {/* <ul className="mt-5 list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-muted-foreground">
