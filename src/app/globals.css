@@ -41,7 +41,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 1.5rem;
+  scroll-padding-top: 3.5rem;
 }
 
 body {
@@ -67,6 +67,13 @@ body {
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 28px 28px;
   mask-image: linear-gradient(to bottom, #000 30%, transparent);
+}
+
+/* The right column is its own scroller on wide screens, so smooth scrolling
+   and the offset for the sticky top nav are set here as well as on <html>. */
+.scroll-area {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3.5rem;
 }
 
 @keyframes marquee {

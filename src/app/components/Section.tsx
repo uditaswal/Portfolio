@@ -1,7 +1,12 @@
+/** Striped separator between sections. */
 export function Divider() {
   return <div className="stripes h-6 border-y" aria-hidden />;
 }
 
+/**
+ * Standard section wrapper: an anchor `id` (must match `sections` in data.ts),
+ * a heading and padded content.
+ */
 export default function Section({
   id,
   title,
@@ -21,6 +26,7 @@ export default function Section({
   );
 }
 
+/** Small outlined chip for tech names. */
 export function Tag({ children }: { children: React.ReactNode }) {
   return (
     <span className="border px-2 py-0.5 font-mono text-xs text-muted-foreground">

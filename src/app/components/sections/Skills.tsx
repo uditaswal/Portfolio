@@ -2,6 +2,7 @@ import Image from "next/image";
 import { skills } from "../../data";
 import Section from "../Section";
 
+/** Tech stack chips. Edit `skills` in data.ts; icons live in /public/logo. */
 export default function Skills() {
   return (
     <Section id="skills" title="Skills & Technologies">

@@ -19,6 +19,20 @@ A modern single-page portfolio website built with Next.js. It uses a clean dark 
 - Email and social links
 - Optimized local images and assets
 
+## Editing content
+
+Nearly everything on the site is data in [`src/app/data.ts`](src/app/data.ts). Components only display it.
+
+| To change | Edit in `data.ts` | Also needed |
+| --- | --- | --- |
+| Name, role, email, links | `profile` | |
+| Add a project | copy an object in `projects` | |
+| Add a job or role | `experience` (newest role first) | |
+| Add a skill chip | `skills` | icon file in `public/logo` |
+| Add a certificate or honor | `certificates` / `honors` | image in `public/certificates` |
+| Add or reorder a section | `sections` | add the component in `src/app/page.tsx` with a matching `id` |
+| Avatar | | replace `public/berserk.jpg` |
+
 ## Design inspiration
 
 The layout and visual style are inspired by [Ashutoshx7's Portfolio-v2](https://github.com/Ashutoshx7/Portfolio-v2-). All content, code and assets in this repository are my own.

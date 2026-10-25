@@ -1,6 +1,7 @@
 import { education } from "../../data";
 import Section from "../Section";
 
+/** Education list. Edit `education` in data.ts. */
 export default function Education() {
   return (
     <Section id="education" title="Education">

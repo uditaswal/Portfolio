@@ -42,6 +42,12 @@ function Card({ item, hidden }: { item: Credential; hidden?: boolean }) {
   );
 }
 
+/**
+ * Endlessly scrolling row of cards. The list is rendered twice and the track
+ * slides left by exactly half its width (see `marquee` in globals.css), which
+ * makes the loop seamless. The second copy is hidden from screen readers and
+ * keyboard focus. Pauses on hover or focus.
+ */
 export default function Marquee({
   items,
   reverse = false,

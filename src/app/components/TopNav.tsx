@@ -3,24 +3,38 @@
 import { useEffect, useState } from "react";
 import { sections } from "../data";
 
+/**
+ * Sticky section links above the scrolling column. The active link is the
+ * section whose top edge is closest to (but not below) a line 30% down the
+ * window. Links come from `sections` in data.ts.
+ */
 export default function TopNav() {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState(sections[0].id);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible.length > 0) setActive(visible[0].target.id);
-      },
-      { rootMargin: "-20% 0px -60% 0px" },
-    );
-    sections.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+    const update = () => {
+      const line = window.innerHeight * 0.3;
+      let best = sections[0].id;
+      let bestTop = -Infinity;
+      for (const { id } of sections) {
+        const top = document.getElementById(id)?.getBoundingClientRect().top;
+        if (top !== undefined && top <= line && top > bestTop) {
+          best = id;
+          bestTop = top;
+        }
+      }
+      setActive(best);
+    };
+
+    update();
+    // `scroll` does not bubble, so listen in the capture phase. That catches the
+    // window on small screens and the right-hand column on wide ones.
+    document.addEventListener("scroll", update, { capture: true, passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      document.removeEventListener("scroll", update, { capture: true });
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
   return (

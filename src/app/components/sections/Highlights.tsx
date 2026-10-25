@@ -2,6 +2,7 @@ import { certificates, honors } from "../../data";
 import Marquee from "../Marquee";
 import Section from "../Section";
 
+/** Certificates and honors as two scrolling rows. Edit the lists in data.ts. */
 export default function Highlights() {
   return (
     <Section id="highlights" title="Highlights">

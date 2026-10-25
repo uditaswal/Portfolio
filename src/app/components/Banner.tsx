@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+/** Decorative grid header with a live clock (updates every second, client only). */
 export default function Banner() {
   const [time, setTime] = useState("");
 

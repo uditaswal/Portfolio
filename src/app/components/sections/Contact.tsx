@@ -1,6 +1,7 @@
 import { profile } from "../../data";
 import Section from "../Section";
 
+/** Closing call to action: email first, then social links. */
 export default function Contact() {
   return (
     <Section id="contact" title="Get in touch">

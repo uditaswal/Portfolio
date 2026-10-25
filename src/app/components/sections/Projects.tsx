@@ -1,6 +1,7 @@
 import { projects } from "../../data";
 import Section, { Tag } from "../Section";
 
+/** Project cards. Add or edit projects in `projects` in data.ts; the grid reflows by itself. */
 export default function Projects() {
   return (
     <Section id="projects" title="Projects">

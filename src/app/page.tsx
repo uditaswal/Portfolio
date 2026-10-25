@@ -9,15 +9,27 @@ import Highlights from "./components/sections/Highlights";
 import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
 
+/**
+ * Page shell.
+ *
+ * Small screens: one column, the whole page scrolls.
+ * Wide screens (lg+): the shell fills the window and never scrolls. The left
+ * rail stays put and only the right column (`.scroll-area`) scrolls.
+ *
+ * To add, remove or reorder a section: edit the list below and the matching
+ * entry in `sections` (src/app/data.ts) so the nav stays in sync.
+ */
 export default function Home() {
   return (
-    <>
-      <div className="mx-auto min-h-screen max-w-[1500px] border-x lg:grid lg:grid-cols-[400px_1fr]">
-        <aside className="border-b lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto lg:border-r lg:border-b-0">
-          <Hero />
-        </aside>
-        <main className="min-w-0">
-          <TopNav />
+    <div className="mx-auto max-w-[1500px] border-x lg:grid lg:h-screen lg:grid-cols-[400px_1fr] lg:overflow-hidden">
+      <aside className="flex flex-col border-b lg:overflow-y-auto lg:border-r lg:border-b-0">
+        <Hero />
+        <Footer className="mt-auto hidden lg:block" />
+      </aside>
+
+      <div className="scroll-area min-w-0 lg:overflow-y-auto">
+        <TopNav />
+        <main>
           <div className="grid xl:grid-cols-2 xl:divide-x">
             <Experience />
             <Education />
@@ -31,8 +43,8 @@ export default function Home() {
           <Divider />
           <Contact />
         </main>
+        <Footer className="lg:hidden" />
       </div>
-      <Footer />
-    </>
+    </div>
   );
 }
