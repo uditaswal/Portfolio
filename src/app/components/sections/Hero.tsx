@@ -57,11 +57,17 @@ export default function Hero() {
           </a>
         </p>
 
-        <ul className="mt-5 list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-muted-foreground">
-          <li>I like building scalable applications and shipping them to production.</li>
-          <li>Azure certified: AZ-900, AI-900 and AZ-204.</li>
-          <li>Recognised at HCLTech with Rising Star, Star Performer and Innovation Champion awards.</li>
-        </ul>
+        {/* <ul className="mt-5 list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-muted-foreground">
+          <li>
+            I like building scalable applications and shipping them to
+            production.
+          </li>
+          <li>Azure certified: AZ-204,AZ-900, AI-900.</li>
+          <li>
+            Recognised at HCLTech with Rising Star, Star Performer and
+            Innovation Champion awards.
+          </li>
+        </ul> */}
 
         <div className="mt-6 flex flex-wrap gap-2">
           {links.map((link) => (
