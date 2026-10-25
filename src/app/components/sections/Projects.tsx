@@ -4,7 +4,7 @@ import Section, { Tag } from "../Section";
 export default function Projects() {
   return (
     <Section id="projects" title="Projects">
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4">
         {projects.map((p) => (
           <article key={p.title} className="flex flex-col border bg-card p-4">
             <div className="flex items-center justify-between gap-2">

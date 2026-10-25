@@ -13,8 +13,8 @@ export const sections = [
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
-  { id: "certificates", label: "Certificates" },
-  { id: "honors", label: "Honors" },
+  { id: "education", label: "Education" },
+  { id: "highlights", label: "Highlights" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -142,5 +142,32 @@ export const honors: Credential[] = [
     title: "Rising Star",
     image: "/certificates/Certificate Of Recognition 2023.jpg",
     date: "Mar 2023",
+  },
+];
+
+export const education = [
+  {
+    degree: "Master of Computer Applications (MCA)",
+    school: "Amity University (WILP)",
+    period: "2025 - 2027",
+    note: "Pursuing",
+  },
+  {
+    degree: "Bachelor of Computer Applications (BCA)",
+    school: "Amity University (WILP)",
+    period: "2022 - 2025",
+    note: "8.07 CGPA",
+  },
+  {
+    degree: "TechBee Program",
+    school: "HCLTech",
+    period: "2021 - 2022",
+    note: "",
+  },
+  {
+    degree: "Senior Secondary",
+    school: "New Green Field School",
+    period: "2020 - 2021",
+    note: "86%",
   },
 ];

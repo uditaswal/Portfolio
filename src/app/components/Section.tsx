@@ -13,10 +13,10 @@ export default function Section({
 }) {
   return (
     <section id={id}>
-      <h2 className="px-6 pt-6 pb-4 text-lg font-semibold tracking-tight">
+      <h2 className="px-6 pt-6 pb-4 lg:px-10 text-lg font-semibold tracking-tight">
         {title}
       </h2>
-      <div className="px-6 pb-8">{children}</div>
+      <div className="px-6 pb-8 lg:px-10">{children}</div>
     </section>
   );
 }

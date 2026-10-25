@@ -16,8 +16,8 @@ export default function Experience() {
             <li>
               Recognised with the Rising Star, Star Performer, ERS Star Champion
               and Innovation Champion awards. See{" "}
-              <a href="#honors" className="text-foreground underline-offset-4 hover:underline">
-                Honors
+              <a href="#highlights" className="text-foreground underline-offset-4 hover:underline">
+                Highlights
               </a>
               .
             </li>

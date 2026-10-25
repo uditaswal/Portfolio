@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { sections } from "../data";
 
-export default function SideIndex() {
+export default function TopNav() {
   const [active, setActive] = useState("");
 
   useEffect(() => {
@@ -24,26 +24,21 @@ export default function SideIndex() {
   }, []);
 
   return (
-    <aside className="fixed top-24 left-[calc(50%+22rem)] hidden w-36 xl:block">
-      <p className="mb-3 font-mono text-xs tracking-widest text-muted-foreground">
-        INDEX
-      </p>
-      <ul className="space-y-2 border-l pl-4 text-sm">
-        {sections.map(({ id, label }) => (
-          <li key={id}>
-            <a
-              href={`#${id}`}
-              className={`transition-colors hover:text-foreground ${
-                active === id
-                  ? "text-foreground"
-                  : "text-muted-foreground"
-              }`}
-            >
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </aside>
+    <nav
+      aria-label="Sections"
+      className="sticky top-0 z-30 flex gap-6 overflow-x-auto border-b bg-background/95 px-6 py-3 text-sm lg:px-10"
+    >
+      {sections.map(({ id, label }) => (
+        <a
+          key={id}
+          href={`#${id}`}
+          className={`shrink-0 transition-colors hover:text-foreground ${
+            active === id ? "text-foreground" : "text-muted-foreground"
+          }`}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
   );
 }

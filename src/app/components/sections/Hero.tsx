@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="-mt-10 flex items-end justify-between">
           <div className="relative size-20 overflow-hidden rounded-full border-2 bg-background sm:size-24">
             <Image
-              src="/luffy.jpg"
+              src="/berserk.jpg"
               alt="Udit Aswal"
               fill
               sizes="96px"
