@@ -3,13 +3,16 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --card: #fafafa;
-  --muted: #f5f5f5;
-  --muted-foreground: #737373;
-  --border: #0000001a;
-  --stripe: #0000000d;
+  /* Light theme: soft grey ground instead of pure white (less glare), with
+     near-black text. Cards are a step lighter than the page, like the dark
+     theme where cards are a step lighter than black. */
+  --background: #ebebed;
+  --foreground: #18181b;
+  --card: #f5f5f6;
+  --muted: #dedee1;
+  --muted-foreground: #55555c;
+  --border: #00000026;
+  --stripe: #00000012;
 }
 
 .dark {
