@@ -18,9 +18,9 @@ export default function Hero() {
       <Banner />
       <div className="px-6 pb-8">
         <div className="-mt-10 flex items-end justify-between">
-          <div className="relative size-20 overflow-hidden border-2 bg-background sm:size-24">
+          <div className="relative size-20 overflow-hidden rounded-full border-2 bg-background sm:size-24">
             <Image
-              src="/profile.jpg"
+              src="/luffy.jpg"
               alt="Udit Aswal"
               fill
               sizes="96px"
