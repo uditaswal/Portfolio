@@ -144,7 +144,7 @@ export const experience: Job[] = [
 
 export type Project = {
   title: string;
-  status: "Live" | "Archived";
+  status: "Live" | "Archived" | "In Development";
   /** One-sentence summary. */
   description: string;
   /** Optional detail bullets. Cards without them just show the description. */
@@ -157,6 +157,36 @@ export type Project = {
 
 /** To add a project, copy one object below and edit it. The grid reflows by itself. */
 export const projects: Project[] = [
+{
+  title: "TubeForge",
+  status: "In Development",
+  description:
+    "Self-hosted AI pipeline that turns a topic into a reviewed, upload-ready vertical YouTube Short.",
+  points: [
+    "AI writes a strict-JSON script and scene plan; narration, captions, motion, mixing and encoding run locally with Python and FFmpeg.",
+    "Durable job pipeline with worker leases, retries and atomic artifact promotion, gated by script, preview and publication approvals.",
+    "Creator Studio dashboard with auth and CSRF protection, plus structured, rotating, redacted logs with job ids, timings and HTTP status codes.",
+  ],
+  tags: ["Python", "FastAPI", "SQLAlchemy", "SQLite", "Docker", "FFmpeg", "Kokoro TTS", "Whisper", "Playwright"],
+  links: [
+    { label: "GitHub", href: "https://github.com/uditaswal/TubeForge" },
+  ],
+},
+{
+  title: "OpsDetective",
+  status: "In Development",
+  description:
+    "Self-hosted observability platform for monitoring services and testing how they respond to faults.",
+  points:[
+    "Secure, tenant-isolated telemetry intake with Prometheus metrics and synthetic fault testing.",
+    "live service health dashboards and anomaly detection.",
+    "privacy-conscious AI investigations that connect symptoms to likely causes."
+  ],  
+  tags: ["Python", "FastAPI", "Next.js", "PostgreSQL", "Prometheus", "Docker"],
+  links: [
+    { label: "GitHub", href: "https://github.com/uditaswal/OpsDetective" },
+  ],
+},
   {
     title: "CarePlus",
     status: "Live",
@@ -193,17 +223,22 @@ export const projects: Project[] = [
       { label: "Live", href: "https://url-shortner-ugkr.onrender.com/" },
     ],
   },
-  {
-    title: "Snake Game",
-    status: "Live",
-    description:
-      "A classic Snake game built with pure HTML, CSS and JavaScript. Simple, fast and nostalgic.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    links: [
-      { label: "GitHub", href: "https://github.com/uditaswal/JS-SnakeGame" },
-      { label: "Play", href: "https://uditaswal.github.io/JS-SnakeGame/" },
-    ],
-  },
+{
+  title: "Snake Game",
+  status: "Live",
+  description:
+    "Full-stack browser game with competitive leaderboards and server-validated gameplay.",
+    points:[
+    "Dedicated game engine with keyboard and swipe controls, full-screen play, and personal-best tracking.",
+"Public leaderboard backed by server-side replay validation, single-use challenges, and rate limiting.",
+"Google sign-in with PKCE, Argon2id password hashing, and secure sessions, with instant guest play."
+  ] , 
+  tags: ["React", "TypeScript", "Tailwind CSS", "Neon PostgreSQL", "Vercel"],
+  links: [
+    { label: "GitHub", href: "https://github.com/uditaswal/SnakeGame" },
+    { label: "Play", href: "https://snake-game-two-flame.vercel.app/" },
+  ],
+},
 ];
 
 /* -------------------------------------------------------------------------- */
