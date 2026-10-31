@@ -99,6 +99,64 @@ body {
   background: var(--muted-foreground);
 }
 
+.stars-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.stars-field .star {
+  position: absolute;
+  border-radius: 9999px;
+  background: var(--foreground);
+  opacity: 0.15;
+  animation: star-twinkle var(--dur) ease-in-out var(--delay) infinite;
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: var(--min-op);
+    transform: scale(1);
+  }
+  50% {
+    opacity: var(--max-op);
+    transform: scale(1.3);
+  }
+}
+
+.stars-field.drift {
+  animation: star-drift 120s linear infinite;
+}
+
+@keyframes star-drift {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-40px, -30px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stars-field .star,
+  .stars-field.drift {
+    animation: none;
+    opacity: 0.25;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes marquee {
   to {
     transform: translateX(-50%);

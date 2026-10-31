@@ -220,7 +220,7 @@ export const projects: Project[] = [
     tags: ["Node.js", "Express", "MongoDB", "EJS"],
     links: [
       { label: "GitHub", href: "https://github.com/uditaswal/url-shortner" },
-      { label: "Live", href: "https://url-shortner-ugkr.onrender.com/" },
+      { label: "Render", href: "https://url-shortner-ugkr.onrender.com/" },
     ],
   },
 {

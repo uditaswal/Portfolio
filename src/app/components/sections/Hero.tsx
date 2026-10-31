@@ -3,7 +3,7 @@ import { profile } from "../../data";
 import Banner from "../Banner";
 import CommandPalette from "../CommandPalette";
 import ResumeButton from "../ResumeButton";
-import ThemeToggle from "../ThemeToggle";
+// import ThemeToggle from "../ThemeToggle";
 
 /**
  * Every contact button, in display order. `external` links open in a new tab.
@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
           <div className="flex items-center gap-2 pb-1">
             <CommandPalette />
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
         </div>
 
